@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resturantista | Menu</title>
+    <link rel="stylesheet" href="./css/fontawesome-free-6.5.1-web/css/all.min.css">
+    <link rel="stylesheet" href="./menu.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="./img/restaurantista-logo_480.jpg" alt="Logo e kompanise (foto e pa disponueshme)">
+                </a>
+            </div>
+            <div class="nav-link">
+                <ul>
+                    <li>
+                        <a href="index.html">Home</a>
+                    </li>
+                    <li>
+                        <a href="menu.html">Menu</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="burger">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <div id="menu-div" style="width: 65%; display: inline-block; vertical-align: top;">
+            <img id="menu-image" src="./img/hamburger-web-devs-mmks_480.png" alt="Menu">
+            <h2>Menu</h2>
+            <select name="menu" id="menu" onchange="updateMenuItems()">
+                <option value="pasta">Pasta</option>
+                <option value="pizza">Pizza</option>
+                <option value="desserts">Desserts</option>
+            </select>
+            <input type="text" id="search" placeholder="Search menu items...">
+            <ul id="menu-items">
+                
+            </ul>
+            <!-- elementet e tjera -->
+        </div>
+        <div style="width: 35%; display: inline-block; vertical-align: top;">
+            <h2>Add to Basket</h2>
+            <ul id="basket-items"></ul>
+            <div id="basket-message" style="display: none;">
+                Sorry, you can't order yet, Resturantista has set a minimum order amount of 20.00&euro;
+            </div>
+            <p>Subtotal: <span id="subtotal-price">0.00</span>&euro; </p>
+            <p>Tax(10%): <span id="tax-price">0</span>%</p>
+            <p>Total: <span id="totali-price">0.00</span>&euro; </p>
+            <button id="checkout">Pay</button>
+        </div>
+
+    </main>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About us</h3>
+                    <p>
+                        At our website, we combine food with the convinience of online ordering. With just a few clicks, you
+                        can explore our menu, select your favorite dishes, and have them delivered right to your doorstep.
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact</h3>
+                    <p>
+                        123 Main St. <br>
+                        AnyTown, Kosovo 10000 <br>
+                        Email: <a href="email:order@restaurantista.org">order@restaurantista.org</a> <br>
+                        Phone: <a href="tel:044-000-000 ">044-000-000</a>
+                    </p>
+                </div>
+                <div class="footer-column">
+                    <img src="./img/restaurantista-logo_480.jpg" alt="Logo" class="footer-logo">
+                    <div class="social-media-icons">
+                        <a href="https://facebook.com/">
+                            <i class="fa-brands fa-facebook"></i>
+                        </a>
+                        <a href="https://twitter.com/">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="https://instagram.com/">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+    
+                    </div>
+                </div>
+            </div>
+            <p class="footer-bottom">
+                2024 Resturantista, <i class="fa-regular fa-copyright"></i> All rights reserved to WebDevs 02/24
+            </p>
+        </div>
+    </footer>
+    <div id="footer-placeholder"></div>
+    <script src="templates.js"></script>
+    <script src="menu.js"></script>
+</body>
+</html>
